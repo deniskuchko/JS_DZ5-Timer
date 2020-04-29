@@ -1,0 +1,30 @@
+span{
+    display: inline-block;
+}
+
+#timer span{
+    margin-top: 65px;
+}
+p{
+    display: inline-block;
+}
+
+#timer, #buttons, .save_remove{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+#timer{
+    border: 5px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    margin: 0 auto;
+
+};
+
+
+.number_lap{
+    display: block;
+}
