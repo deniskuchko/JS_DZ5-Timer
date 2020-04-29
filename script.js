@@ -90,20 +90,40 @@ function clear(){
 };
 
 document.getElementById('clear').addEventListener('click', clear);
+    
 
-let  i = 1;
 function circle(){
+   
+
+    let span = document.createElement('span');
+    span.className = 'number_lap';
+    span.innerHTML = 'Общее время кругов: ' + hoursEnd + ':' + minutesEnd + ':' + secondsEnd + ':' + miliSecondsEnd + 's';
+    document.getElementById('lap').append(span);
+   
+    
+    /* span.replaceWith(span); */
+}
+let  i = 1;
+function circleOne(){
+   
     
     let span = document.createElement('span');
     span.className = 'number_lap';
-    span.innerHTML = 'Круг номер: ' + i + ' Время круга: ' + hoursEnd + ':' + minutesEnd + ':' + secondsEnd + ':' + miliSecondsEnd + 's';
+    span.innerHTML = 'Круг номер: ' + i + '. ' + hoursEnd + ':' + minutesEnd + ':' + secondsEnd + ':' + miliSecondsEnd + 's';
+    
     document.getElementById('lap').append(span);
     
+    miliSeconds = 0;
+    seconds = 0;
+    minutes = 0;
+    hours = 0; 
     i++;
     /* span.replaceWith(span); */
 }
 
+
 document.getElementById('circle').addEventListener('click', circle);
+document.getElementById('circle_one').addEventListener('click', circleOne);
 
 saveBtn.addEventListener('click', function(){
     localStorage.setItem('Our_circle', lap.innerHTML);

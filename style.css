@@ -5,8 +5,12 @@ span{
 #timer span{
     margin-top: 65px;
 }
-p{
-    display: inline-block;
+#lap span{
+    display: block;
+};
+
+#timer p{
+    display: inline;
 }
 
 #timer, #buttons, .save_remove{
@@ -27,4 +31,13 @@ p{
 
 .number_lap{
     display: block;
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: black;
+    color: cornsilk;
 }
